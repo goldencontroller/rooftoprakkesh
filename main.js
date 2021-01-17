@@ -32,12 +32,12 @@ function load() {
     else if (frame % 21 == 0) {
         if (touching(playerRect, goal)) {
             level_on++;
-            document.getElementById("gameframe").style.backgroundColor = "black";
+            document.getElementById("gameframe").style.background = "black";
             scrollelems.style.opacity = "0";
             setTimeout(function() {
                 generate_level();
                 levelInit(my_level);
-                document.getElementById("gameframe").style.backgroundColor = "deepskyblue";
+                document.getElementById("gameframe").style.background = "linear-gradient(deepskyblue, skyblue)";
                 scrollelems.style.opacity = "1";
                 load();
             }, 2000);
