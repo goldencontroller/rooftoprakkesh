@@ -32,7 +32,7 @@ function generate_level() {
         for (j = level_split.length - building_height; j < level_split.length; j++) {
             for (k = 0; k < building_length; k++) {
                 level_split[j][k + drawx] = "#";
-                if (i > 0 && j == level_split.length - building_height && Math.floor(Math.random() * building_length) == 0) {
+                if (i > 0 && j == level_split.length - building_height && Math.floor(Math.random() * building_length) < 2) {
                     if (Math.floor(Math.random() * 3)) {
                         level_split[j - 1][k + drawx] = ">";
                     }
