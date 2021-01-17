@@ -55,7 +55,7 @@ function movePlayer() {
 
     velocity_right *= 0.75;
 
-    if (clicked && playerStunCount == 0) {
+    if (clicked && playerStunCount == 0 && playerRect.getAttribute("y") >= 0) {
         clicked = false;
         bullet = document.createElementNS(svgns, "rect");
         bullet.setAttribute("width", 10);
