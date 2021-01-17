@@ -21,7 +21,7 @@ function bulletscript() {
         }
         else {
             for (enemy of document.getElementsByClassName("enemytype1")) {
-                if (touching(enemy, bullet)) {
+                if (touching(enemy, bullet) && !Boolean(bullet.dataset.doNotKillEnemy)) {
                     bullet.remove();
                     enemy.remove();
                     i -= 1;
@@ -33,6 +33,10 @@ function bulletscript() {
                     enemy.remove();
                     i -= 1;
                 }
+            }
+            if (touching(playerRect, bullet) && Boolean(bullet.dataset.doNotKillEnemy)) {
+                velocity_right += 2 * Math.cos(parseFloat(bullet.dataset.angle));
+                velocity_up += 2 * Math.sin(parseFloat(bullet.dataset.angle));
             }
         }
         i++;
