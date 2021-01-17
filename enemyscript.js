@@ -25,4 +25,21 @@ function enemyscript() {
             playerStunCount = 21;
         }
     }
+    for (enemy of document.getElementsByClassName("enemytype2")) {
+        if (frame % 50 == 0) {
+            if (Math.abs(playerRect.getAttribute("x") - enemy.getAttribute("x")) < 500) {
+                bullet = document.createElementNS(svgns, "rect");
+                bullet.setAttribute("width", 10);
+                bullet.setAttribute("height", 10);
+                bullet.setAttribute("rx", 5);
+                bullet.setAttribute("x", parseFloat(enemy.getAttribute("x")) + 15);
+                bullet.setAttribute("y", parseFloat(enemy.getAttribute("y")) + 25);
+                scrollelems.appendChild(bullet);
+                bullet.dataset.doNotKillEnemy = "1";
+                fireangle = Math.atan2(parseFloat(bullet.getAttribute("y")) - parseFloat(playerRect.getAttribute("y")) , parseFloat(playerRect.getAttribute("x") - parseFloat(bullet.getAttribute("x"))));
+                bullet.dataset.angle = fireangle;
+                bullet.setAttribute("class", "bullet");
+            }
+        }
+    }
 }

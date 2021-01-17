@@ -27,6 +27,13 @@ function bulletscript() {
                     i -= 1;
                 }
             }
+            for (enemy of document.getElementsByClassName("enemytype2")) {
+                if (touching(enemy, bullet) && !Boolean(bullet.dataset.doNotKillEnemy)) {
+                    bullet.remove();
+                    enemy.remove();
+                    i -= 1;
+                }
+            }
         }
         i++;
     }

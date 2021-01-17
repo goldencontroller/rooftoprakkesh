@@ -50,6 +50,15 @@ function levelInit(levelstring) {
                 enemy.dataset.direction = "left";
                 scrollelems.appendChild(enemy);
             }
+            else if (theMatrix[r][c] == "2") {
+                enemy = document.createElementNS(svgns, "rect");
+                enemy.style.fill = "rgb(100, 20, 0)";
+                enemy.setAttribute("width", 30); enemy.setAttribute("height", 50);
+                enemy.setAttribute("x", c * 40); enemy.setAttribute("y", r * 40 - (50 - 40));
+                enemy.setAttribute("rx", 30 / 2);
+                enemy.setAttribute("class", "enemytype2");
+                scrollelems.appendChild(enemy);
+            }
             else if (theMatrix[r][c] == "P") {
                 goal = document.createElementNS(svgns, "rect");
                 goal.style.fill = "rgb(0, 255, 0)";
