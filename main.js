@@ -25,7 +25,7 @@ function load() {
 
     setscrolling(parseFloat(playerRect.getAttribute("x")), my_level.split("\n")[0].split("").length * 40);
 
-    if (parseFloat(playerRect.getAttribute("y")) > 480 || playerTouchingEnemy) {
+    if (parseFloat(playerRect.getAttribute("y")) > 480) {
         alert("loser");
     }
     else if (frame % 21 == 0) {

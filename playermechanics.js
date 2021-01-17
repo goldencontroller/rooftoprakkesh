@@ -55,7 +55,7 @@ function movePlayer() {
 
     velocity_right *= 0.75;
 
-    if (clicked) {
+    if (clicked && playerStunCount == 0) {
         clicked = false;
         bullet = document.createElementNS(svgns, "rect");
         bullet.setAttribute("width", 10);
@@ -69,6 +69,9 @@ function movePlayer() {
         bullet.setAttribute("class", "bullet");
         velocity_right -= 10 * Math.cos(fireangle);
         velocity_up -= 10 * Math.sin(fireangle);
+    }
+    if (playerStunCount > 0) {
+        playerStunCount -= 1;
     }
 
     playerRect.setAttribute("y", Math.floor(parseFloat(playerRect.getAttribute("y")) - velocity_up));

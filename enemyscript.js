@@ -1,4 +1,4 @@
-playerTouchingEnemy = false;
+playerStunCount = 0;
 function enemyscript() {
     for (enemy of document.getElementsByClassName("enemytype1")) {
         if (enemy.dataset.direction == "left") {
@@ -21,7 +21,8 @@ function enemyscript() {
             }
         }
         if (touching(enemy, playerRect)) {
-            playerTouchingEnemy = true;
+            velocity_right += (enemy.dataset.direction == "right")?10:-10;
+            playerStunCount = 21;
         }
     }
 }
