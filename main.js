@@ -15,6 +15,8 @@ document.getElementById("gameframe").addEventListener("click", function(e) {
 
 frame = 0;
 
+level_on = 1;
+
 function load() {
 
     collisions = detect_platform_collisions();

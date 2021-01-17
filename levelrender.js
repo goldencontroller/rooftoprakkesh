@@ -24,6 +24,16 @@ function levelInit(levelstring) {
     scrollelems = document.createElementNS(svgns, "g");
     document.getElementById("gameframe").appendChild(scrollelems);
 
+    if (level_on == 1) {
+        controls = document.createElementNS(svgns, "image");
+        controls.setAttribute("width", 240);
+        controls.setAttribute("height", 135);
+        controls.setAttribute("href", "graphics/controls.svg");
+        controls.setAttribute("x", 160);
+        controls.setAttribute("y", 90);
+        scrollelems.appendChild(controls);
+    }
+
     theMatrix = [];
     for (r = 0; r < 12; r++) { theMatrix.push(my_level.split("\n")[r].split("")); };
 
