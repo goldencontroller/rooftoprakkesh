@@ -36,7 +36,7 @@ function enemyscript() {
                 bullet.setAttribute("y", parseFloat(enemy.getAttribute("y")) + 25);
                 scrollelems.appendChild(bullet);
                 bullet.dataset.doNotKillEnemy = "1";
-                fireangle = Math.atan2(parseFloat(bullet.getAttribute("y")) - parseFloat(playerRect.getAttribute("y")) , parseFloat(playerRect.getAttribute("x") - parseFloat(bullet.getAttribute("x"))));
+                fireangle = Math.atan2(parseFloat(bullet.getAttribute("y")) - parseFloat(playerRect.getAttribute("y")) , parseFloat(playerRect.getAttribute("x")) - parseFloat(bullet.getAttribute("x")));
                 bullet.dataset.angle = fireangle;
                 bullet.setAttribute("class", "bullet");
             }
