@@ -21,8 +21,8 @@ function generate_level() {
     }
     drawx = 1;
     for (i = 0; i < 5; i++) {
-        building_length = 10;
-        building_height = 2;
+        building_length = 10 + Math.floor(Math.random() * 2);
+        building_height = 2 + Math.floor(Math.random() * 3);
         if (i == 0) {
             level_split[level_split.length - 1 - building_height][drawx + 1] = "@";
         }
