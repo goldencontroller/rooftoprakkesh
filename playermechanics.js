@@ -67,8 +67,8 @@ function movePlayer() {
         fireangle = Math.atan2((parseFloat(bullet.getAttribute("y")) - cursorpos[1]) , (cursorpos[0] - parseFloat(bullet.getAttribute("x"))));
         bullet.dataset.angle = fireangle;
         bullet.setAttribute("class", "bullet");
-        velocity_right -= 2 * Math.cos(fireangle);
-        velocity_up -= 2 * Math.sin(fireangle);
+        velocity_right -= 8 * Math.cos(fireangle);
+        velocity_up -= 8 * Math.sin(fireangle);
     }
 
     playerRect.setAttribute("y", Math.floor(parseFloat(playerRect.getAttribute("y")) - velocity_up));
