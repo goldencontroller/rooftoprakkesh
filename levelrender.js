@@ -8,8 +8,8 @@ function setscrolling(playerxpos, levelwidth) {
 }
 
 function buildPlatform(x, y, width, height) {
-    platform = document.createElementNS(svgns, "rect");
-    platform.style.fill = "rgb(0, 120, 0)";
+    platform = document.createElementNS(svgns, "image");
+    platform.setAttribute("href", "graphics/brick.svg");
     platform.setAttribute("width", width); platform.setAttribute("height", height);
     platform.setAttribute("x", x); platform.setAttribute("y", y);
     scrollelems.appendChild(platform);
