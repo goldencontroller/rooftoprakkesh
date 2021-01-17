@@ -41,32 +41,29 @@ function levelInit(levelstring) {
     for (r = 0; r < theMatrix.length; r++) {
         for (c = 0; c < theMatrix[r].length; c++) {
             if (theMatrix[r][c] == "@") {
-                playerRect = document.createElementNS(svgns, "rect");
-                playerRect.style.fill = "rgb(0, 20, 100)";
+                playerRect = document.createElementNS(svgns, "image");
+                playerRect.setAttribute("href", "graphics/goodbean.svg");
                 playerRect.setAttribute("width", 30); playerRect.setAttribute("height", 50);
                 playerRect.setAttribute("x", c * 40); playerRect.setAttribute("y", r * 40);
-                playerRect.setAttribute("rx", 30 / 2);
                 scrollelems.appendChild(playerRect);
             }
             else if (theMatrix[r][c] == "#") {
                 buildPlatform(c * 40, r * 40, 40, 40);
             }
             else if (theMatrix[r][c] == ">") {
-                enemy = document.createElementNS(svgns, "rect");
-                enemy.style.fill = "rgb(100, 20, 0)";
+                enemy = document.createElementNS(svgns, "image");
+                enemy.setAttribute("href", "graphics/badbean.svg");
                 enemy.setAttribute("width", 30); enemy.setAttribute("height", 50);
                 enemy.setAttribute("x", c * 40); enemy.setAttribute("y", r * 40 - (50 - 40));
-                enemy.setAttribute("rx", 30 / 2);
                 enemy.setAttribute("class", "enemytype1");
                 enemy.dataset.direction = "left";
                 scrollelems.appendChild(enemy);
             }
             else if (theMatrix[r][c] == "2") {
-                enemy = document.createElementNS(svgns, "rect");
-                enemy.style.fill = "rgb(100, 20, 0)";
+                enemy = document.createElementNS(svgns, "image");
+                enemy.setAttribute("href", "graphics/badbean.svg");
                 enemy.setAttribute("width", 30); enemy.setAttribute("height", 50);
                 enemy.setAttribute("x", c * 40); enemy.setAttribute("y", r * 40 - (50 - 40));
-                enemy.setAttribute("rx", 30 / 2);
                 enemy.setAttribute("class", "enemytype2");
                 scrollelems.appendChild(enemy);
             }
