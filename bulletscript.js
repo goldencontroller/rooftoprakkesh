@@ -15,6 +15,7 @@ function bulletscript() {
             i -= 1;
         }
         else if (document.getElementById(Math.floor(parseFloat(bullet.getAttribute("x")) / 40).toString() + "::" + Math.floor(parseFloat(bullet.getAttribute("y")) / 40).toString())) {
+            document.getElementById(Math.floor(parseFloat(bullet.getAttribute("x")) / 40).toString() + "::" + Math.floor(parseFloat(bullet.getAttribute("y")) / 40).toString()).remove();
             bullet.remove();
             i -= 1;
         }
