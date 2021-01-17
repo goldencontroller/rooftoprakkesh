@@ -6,7 +6,6 @@ updateCursorPos = function(e) {
     cursorpos[0] = e.clientX - posOffsetData.x - parseInt(scrollelems.getAttribute("transform").split("translate(")[1]);
     cursorpos[1] = e.clientY - posOffsetData.y;
 }
-window.addEventListener("mousemove", updateCursorPos);
 clicked = false;
 document.getElementById("gameframe").addEventListener("click", function(e) {
     updateCursorPos(e);
@@ -32,7 +31,16 @@ function load() {
     }
     else if (frame % 21 == 0) {
         if (touching(playerRect, goal)) {
-            alert("winner");
+            level_on++;
+            document.getElementById("gameframe").style.backgroundColor = "black";
+            scrollelems.style.opacity = "0";
+            setTimeout(function() {
+                generate_level();
+                levelInit(my_level);
+                document.getElementById("gameframe").style.backgroundColor = "deepskyblue";
+                scrollelems.style.opacity = "1";
+                load();
+            }, 2000);
         }
         else {
             requestAnimationFrame(load);

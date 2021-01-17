@@ -6,6 +6,9 @@ function bulletscript() {
             break;
         }
         bullet = document.getElementsByClassName("bullet")[i];
+        if (!Boolean(bullet)) {
+            break;
+        }
         bulletx = parseFloat(bullet.getAttribute("x"));
         bullety = parseFloat(bullet.getAttribute("y"));
         bullet.setAttribute("x", Math.floor(bulletx + Math.cos(bullet.dataset.angle) * speed));

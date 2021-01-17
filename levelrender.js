@@ -20,6 +20,7 @@ function buildPlatform(x, y, width, height) {
 
 function levelInit(levelstring) {
     document.getElementById("gameframe").style.backgroundColor = "deepskyblue";
+    document.getElementById("gameframe").innerHTML = "";
 
     scrollelems = document.createElementNS(svgns, "g");
     document.getElementById("gameframe").appendChild(scrollelems);
