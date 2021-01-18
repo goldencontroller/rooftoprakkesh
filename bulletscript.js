@@ -38,8 +38,8 @@ function bulletscript() {
                 }
             }
             if (touching(playerRect, bullet) && Boolean(bullet.dataset.doNotKillEnemy)) {
-                velocity_right += 3 * Math.cos(parseFloat(bullet.dataset.angle));
-                velocity_up += 3 * Math.sin(parseFloat(bullet.dataset.angle));
+                velocity_right += 4 * Math.cos(parseFloat(bullet.dataset.angle));
+                velocity_up += 4 * Math.sin(parseFloat(bullet.dataset.angle));
                 playerStunCount = 40;
             }
         }
