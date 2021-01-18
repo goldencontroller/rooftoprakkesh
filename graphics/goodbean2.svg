@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50" width="30" height="50">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M15 0L15 0C6.7 0 0 6.7 0 15L0 35C0 43.3 6.7 50 15 50L15 50C23.3 50 30 43.3 30 35L30 15C30 6.7 23.3 0 15 0Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #001464 } 
+		.shp1 { fill: #ffffff } 
+		.shp2 { fill: #ff0000 } 
+		.shp3 { fill: #000000 } 
+	</style>
+	<path id="Background" class="shp0" d="M15 0L15 0C6.7 0 0 6.7 0 15L0 35C0 43.3 6.7 50 15 50L15 50C23.3 50 30 43.3 30 35L30 15C30 6.7 23.3 0 15 0Z" />
+	<g id="Clip-Path: Clip-Path: Folder 1" clip-path="url(#cp1)">
+		<g id="Clip-Path: Folder 1">
+			<g id="Folder 1">
+				<path id="Layer 3" class="shp1" d="M18.53 23.57L0 26L2.63 36.08L9.84 35.38L18.53 23.57Z" />
+				<path id="Layer 3" class="shp2" d="M7 25L8 30L7 36L6 32L7 25Z" />
+				<path id="Layer 3" class="shp3" d="M9 36C9 36 3.9 22.95 -2.29 23.14C-8.48 23.34 -1 55 -1 55L9 37" />
+				<path id="Layer 3" class="shp3" d="M32.56 19.74C32.56 19.74 14.6 21.3 10.91 25.15C7.22 29 1.25 44.77 4.04 62.94C6.83 81.1 47.24 52.39 41.24 37.77C35.24 23.16 32.56 19.74 32.56 19.74Z" />
+			</g>
+		</g>
+	</g>
+	<path id="Layer 1" class="shp3" d="M6 11C6 11 10.43 10.1 13 9C15.57 7.9 16.61 14.32 15 15C13.39 15.68 8 17.58 6 17C4 16.42 6 11 6 11Z" />
+	<path id="Layer 1 copy" class="shp3" d="M0.88 11C0.88 11 -3.55 10.1 -6.12 9C-8.7 7.9 -9.73 14.32 -8.12 15C-6.52 15.68 -1.12 17.58 0.88 17C2.88 16.42 0.88 11 0.88 11Z" />
+	<path id="Layer 2" class="shp3" d="M6 11L1 12L1 13L6 13L6 12" />
+</svg>

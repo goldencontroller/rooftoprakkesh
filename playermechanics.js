@@ -56,6 +56,12 @@ function movePlayer() {
     velocity_right *= 0.75;
 
     if (clicked && playerStunCount == 0 && playerRect.getAttribute("y") >= 0) {
+        if (cursorpos[0] < parseFloat(playerRect.getAttribute("x"))) {
+            playerRect.setAttribute("href", "graphics/goodbean2.svg");
+        }
+        else {
+            playerRect.setAttribute("href", "graphics/goodbean.svg");
+        }
         clicked = false;
         bullet = document.createElementNS(svgns, "rect");
         bullet.setAttribute("width", 10);

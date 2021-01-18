@@ -9,6 +9,7 @@ function enemyscript() {
             focused_brick_gap = document.getElementById(focused_x.toString() + "::" + (focused_y + 1).toString());
             if (document.body.contains(focused_brick_wall) || !(document.body.contains(focused_brick_gap))) {
                 enemy.dataset.direction = "right";
+                enemy.setAttribute("href", "graphics/badbean2.svg");
             }
         } else {
             enemy.setAttribute("x", Math.floor(parseFloat(enemy.getAttribute("x")) + 1));
@@ -18,6 +19,7 @@ function enemyscript() {
             focused_brick_gap = document.getElementById(focused_x.toString() + "::" + (focused_y + 1).toString());
             if (document.body.contains(focused_brick_wall) || !(document.body.contains(focused_brick_gap))) {
                 enemy.dataset.direction = "left";
+                enemy.setAttribute("href", "graphics/badbean.svg");
             }
         }
         if (touching(enemy, playerRect)) {
@@ -27,6 +29,12 @@ function enemyscript() {
     }
     for (enemy of document.getElementsByClassName("enemytype2")) {
         if (frame % 50 == 0) {
+            if (parseFloat(enemy.getAttribute("x")) > parseFloat(playerRect.getAttribute("x"))) {
+                enemy.setAttribute("href", "graphics/badbean.svg");
+            }
+            else {
+                enemy.setAttribute("href", "graphics/badbean2.svg");
+            }
             if (Math.abs(playerRect.getAttribute("x") - enemy.getAttribute("x")) < 500) {
                 bullet = document.createElementNS(svgns, "rect");
                 bullet.setAttribute("width", 10);
