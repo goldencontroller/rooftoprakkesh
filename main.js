@@ -3,8 +3,8 @@ svgns = "http://www.w3.org/2000/svg";
 cursorpos = [0, 0];
 updateCursorPos = function(e) {
     posOffsetData = document.getElementById("gameframe").getBoundingClientRect();
-    cursorpos[0] = e.clientX - posOffsetData.x - parseInt(scrollelems.getAttribute("transform").split("translate(")[1]);
-    cursorpos[1] = e.clientY - posOffsetData.y;
+    cursorpos[0] = (e.clientX * 852 / posOffsetData.width) - posOffsetData.x - parseInt(scrollelems.getAttribute("transform").split("translate(")[1]);
+    cursorpos[1] = (e.clientY * 480 / posOffsetData.height) - posOffsetData.y;
 }
 clicked = false;
 document.getElementById("gameframe").addEventListener("click", function(e) {
