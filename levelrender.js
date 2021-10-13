@@ -36,7 +36,7 @@ function levelInit(levelstring) {
     }
 
     theMatrix = [];
-    for (r = 0; r < 12; r++) { theMatrix.push(my_level.split("\n")[r].split("")); };
+    for (r = 0; r < 12; r++) { theMatrix.push(levelstring.split("\n")[r].split("")); };
 
     for (r = 0; r < theMatrix.length; r++) {
         for (c = 0; c < theMatrix[r].length; c++) {
