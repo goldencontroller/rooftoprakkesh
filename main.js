@@ -37,7 +37,6 @@ function load() {
             setTimeout(function() {
                 generate_level();
                 levelInit(my_level);
-                document.getElementById("gameframe").style.background = "linear-gradient(deepskyblue, skyblue)";
                 scrollelems.style.opacity = "1";
                 load();
             }, 2000);
