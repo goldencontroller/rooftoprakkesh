@@ -85,7 +85,7 @@ function levelInit(levelstring) {
                 goalAnime.setAttribute("repeatCount", "indefinite");
                 goal.appendChild(goalAnime);
 
-                if (level_on = 3) {
+                if (level_on == 3) {
                     var srinath = document.createElementNS(svgns, "image");
                     srinath.setAttribute("href", "graphics/badbean.svg");
                     srinath.setAttribute("width", 30); srinath.setAttribute("height", 50);
