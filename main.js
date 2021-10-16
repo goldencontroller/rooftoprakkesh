@@ -16,6 +16,8 @@ frame = 0;
 
 level_on = 1;
 
+var scrollelems, playerRect, goal;
+
 function load() {
 
     collisions = detect_platform_collisions();
