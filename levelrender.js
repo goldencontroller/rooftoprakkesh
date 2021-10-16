@@ -85,14 +85,6 @@ function levelInit(levelstring) {
                 goalAnime.setAttribute("repeatCount", "indefinite");
                 goal.appendChild(goalAnime);
             }
-            else if (theMatrix[r][c] == "S") {
-                var enemy = document.createElementNS(svgns, "image");
-                enemy.setAttribute("href", "graphics/srinath.svg");
-                enemy.setAttribute("width", 30); enemy.setAttribute("height", 50);
-                enemy.setAttribute("x", c * 40); enemy.setAttribute("y", r * 40 - (50 - 40));
-                enemy.setAttribute("class", "w1srinath");
-                scrollelems.appendChild(enemy);
-            }
         }
     }
 }
