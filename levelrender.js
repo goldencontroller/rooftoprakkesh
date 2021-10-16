@@ -19,8 +19,8 @@ function buildPlatform(x, y, width, height) {
 }
 
 function levelInit(levelstring) {
-    if (level_on < 5) document.getElementById("gameframe").style.background = "linear-gradient(deepskyblue, skyblue)";
-    else if (level_on < 9) document.getElementById("gameframe").style.background = "linear-gradient(orange, lightpink)";
+    if (level_on < 4) document.getElementById("gameframe").style.background = "linear-gradient(deepskyblue, skyblue)";
+    else if (level_on < 7) document.getElementById("gameframe").style.background = "linear-gradient(orange, lightpink)";
     document.getElementById("gameframe").innerHTML = "";
 
     scrollelems = document.createElementNS(svgns, "g");
