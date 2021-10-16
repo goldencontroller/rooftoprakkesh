@@ -84,6 +84,15 @@ function levelInit(levelstring) {
                 goalAnime.setAttribute("additive", "sum");
                 goalAnime.setAttribute("repeatCount", "indefinite");
                 goal.appendChild(goalAnime);
+
+                if (level_on = 3) {
+                    var srinath = document.createElementNS(svgns, "image");
+                    srinath.setAttribute("href", "graphics/badbean.svg");
+                    srinath.setAttribute("width", 30); srinath.setAttribute("height", 50);
+                    srinath.setAttribute("x", c * 40); srinath.setAttribute("y", r * 40 - (50 - 40));
+                    srinath.setAttribute("class", "w1srinath");
+                    scrollelems.appendChild(srinath);
+                }
             }
         }
     }
