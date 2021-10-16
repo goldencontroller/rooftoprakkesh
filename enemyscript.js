@@ -50,4 +50,35 @@ function enemyscript() {
             }
         }
     }
+    for (enemy of document.getElementsByClassName("w1srinath")) {
+        if (frame % 50 == 0) {
+            if (parseFloat(enemy.getAttribute("x")) > parseFloat(playerRect.getAttribute("x"))) {
+                enemy.setAttribute("href", "graphics/srinath.svg");
+            }
+            else {
+                enemy.setAttribute("href", "graphics/srinath2.svg");
+            }
+            if (Math.abs(playerRect.getAttribute("x") - enemy.getAttribute("x")) < 500) {
+                var bullet = document.createElementNS(svgns, "rect");
+                bullet.setAttribute("width", 10);
+                bullet.setAttribute("height", 10);
+                bullet.setAttribute("rx", 5);
+                bullet.setAttribute("x", parseFloat(enemy.getAttribute("x")) + 15);
+                bullet.setAttribute("y", parseFloat(enemy.getAttribute("y")) + 25);
+                scrollelems.appendChild(bullet);
+                bullet.dataset.doNotKillEnemy = "1";
+                fireangle = Math.atan2(
+                    parseFloat(bullet.getAttribute("y")) - (parseFloat(playerRect.getAttribute("y")) + 25),
+                    (parseFloat(playerRect.getAttribute("x")) + 15) - parseFloat(bullet.getAttribute("x"))
+                );
+                bullet.dataset.angle = fireangle;
+                bullet.setAttribute("class", "bullet");
+            }
+        }
+
+        var brick_below = document.getElementById(`${Math.floor(parseFloat(enemy.getAttribute("x")) / 40)}::${Math.floor((parseFloat(enemy.getAttribute("y")) + 10) / 40) + 1}`);
+        if (!(document.body.contains(brick_below))) {
+            enemy.setAttribute("y", parseFloat(enemy.getAttribute("y")) + 2);
+        }
+    }
 }
