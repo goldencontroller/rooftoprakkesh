@@ -31,10 +31,12 @@ function load() {
     if (parseFloat(playerRect.getAttribute("y")) > 480) {
         alert("loser");
     }
-    else if (frame % 21 == 0) {
+    else if (frame % 5 == 0) {
         if (touching(playerRect, goal)) {
             level_on++;
-            document.getElementById("gameframe").style.background = "black";
+            setTimeout(function() {
+                document.getElementById("gameframe").style.background = "black";
+            }, 690);
             scrollelems.style.opacity = "0";
             setTimeout(function() {
                 generate_level();
