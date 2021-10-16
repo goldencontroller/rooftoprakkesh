@@ -1,0 +1,21 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50" width="30" height="50">
+	<title>badbean-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M15 0L15 0C6.7 0 0 6.7 0 15L0 35C0 43.3 6.7 50 15 50L15 50C23.3 50 30 43.3 30 35L30 15C30 6.7 23.3 0 15 0Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #641400 } 
+		.shp1 { fill: #b0b0b0 } 
+		.shp2 { fill: #000000 } 
+	</style>
+	<path id="Background" class="shp0" d="M15 0L15 0C23.3 0 30 6.7 30 15L30 35C30 43.3 23.3 50 15 50L15 50C6.7 50 0 43.3 0 35L0 15C0 6.7 6.7 0 15 0Z" />
+	<g id="Folder 1" clip-path="url(#cp1)">
+		<path id="Layer 3" class="shp1" d="M33 25L-4.5 11.08L-5 52L42 63" />
+	</g>
+	<path id="Layer 1" class="shp2" d="M24 11C24 11 19.57 10.1 17 9C14.43 7.9 13.39 14.32 15 15C16.61 15.68 22 17.58 24 17C26 16.42 24 11 24 11Z" />
+	<path id="Layer 1 copy" class="shp2" d="M29.12 11C29.12 11 33.55 10.1 36.12 9C38.7 7.9 39.73 14.32 38.12 15C36.52 15.68 31.12 17.58 29.12 17C27.12 16.42 29.12 11 29.12 11Z" />
+	<path id="Layer 2" class="shp2" d="M24 11L29 12L29 13L24 13L24 12" />
+</svg>
