@@ -79,6 +79,10 @@ function enemyscript() {
         var brick_below = document.getElementById(`${Math.floor(parseFloat(enemy.getAttribute("x")) / 40)}::${Math.floor((parseFloat(enemy.getAttribute("y")) + 10) / 40) + 1}`);
         if (!(document.body.contains(brick_below))) {
             enemy.setAttribute("y", parseFloat(enemy.getAttribute("y")) + 2);
+            if (parseFloat(enemy.getAttribute("y")) >= 1000) {
+                goal.setAttribute("y", goal.dataset.originalY);
+                goal.setAttribute("fill-opacity", 1);
+            }
         }
     }
 }

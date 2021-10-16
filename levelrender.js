@@ -92,6 +92,10 @@ function levelInit(levelstring) {
                     srinath.setAttribute("x", c * 40); srinath.setAttribute("y", r * 40 - (50 - 40));
                     srinath.setAttribute("class", "w1srinath");
                     scrollelems.appendChild(srinath);
+
+                    goal.dataset.originalY = goal.getAttribute("y");
+                    goal.setAttribute("y", 1000);
+                    goal.setAttribute("fill-opacity", 0);
                 }
             }
         }
