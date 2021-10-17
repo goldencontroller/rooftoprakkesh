@@ -36,8 +36,8 @@ function load() {
             level_on++;
             setTimeout(function() {
                 document.getElementById("gameframe").style.background = "black";
+                scrollelems.style.opacity = "0";
             }, 690);
-            scrollelems.style.opacity = "0";
             setTimeout(function() {
                 generate_level();
                 levelInit(my_level);
